@@ -50,7 +50,17 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-
+  assets:
+    - images/music1.jpg
+    - images/music2.jpg
+    - images/music3.jpg
+    - images/music4.jpg
+    - images/music5.jpg
+    - images/music6.jpg
+    - images/music7.jpg
+    - images/music8.jpg
+    - images/music9.jpg
+    - images/music10.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
