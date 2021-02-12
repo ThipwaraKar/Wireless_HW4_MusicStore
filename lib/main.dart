@@ -19,6 +19,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List picked = [false, false ,false ,false, false ,false,
   false, false ,false , false ];
+  //List<int> prices = [1,2,3,4,5,6,7,8,9,10];
 
   int totalAmount = 0;
 
@@ -26,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       picked[index] = !picked[index];
       getTotalAmount();
+    
     });
   }
 
@@ -34,13 +36,13 @@ class _MyHomePageState extends State<MyHomePage> {
     for (int i = 0; i < picked.length; i++) {
       if (picked[i]) {
         count = count + 1;
-        //totalAmount = totalAmount + double.parse(itemCard[i].price);
+        
       }
       if (i == picked.length - 1) {
         setState(() {
-         
+         //totalAmount = totalAmount + prices[i];
          // totalAmount += price;
-          //totalAmount =  20 * count;
+          totalAmount =  20 * count;
         });
       }
     }
@@ -116,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         'images/music3.jpg', true, 2),
                    itemCard('Feeling Blue', 'jimmy brown', '20',
                         'images/music4.jpg', true, 3),
-                    itemCard('green tea and /n honey', 'Dane Amar', '20',
+                    itemCard('GreenTea&Honey', 'Dane Amar', '20',
                         'images/music5.jpg', true, 4),
                     itemCard('morning coffee', 'chevy', '20',
                         'images/music6.jpg', true, 5),
@@ -133,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.only(top: 1500.0, bottom: 15.0),
+                  padding: EdgeInsets.only(top: 1900.0, bottom: 15.0),
                   child: Container(
                       height: 50.0,
                       width: double.infinity,
@@ -230,6 +232,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget itemCard(itemName, artist, price, imgPath, available, i) {
+    
     return InkWell(
       onTap: () {
         if (available) {
