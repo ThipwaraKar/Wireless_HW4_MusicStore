@@ -1,577 +1,361 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
- class MyApp extends StatelessWidget {
-  int number = 0;
-   @override
-  Widget build(BuildContext context) {
-   return MaterialApp(
-  debugShowCheckedModeBanner: false,
-   title: 'TheMint Music store',
-   theme: ThemeData(
-   primarySwatch: Colors.amber,
-   ),
-       home: Scaffold(
-   appBar: AppBar(title: Text('TheMint Music store',),
-
-   ),
-
-   body: BodyLayout(),
-
-
-   ),
-   );
-   }
-   }
-
- class BodyLayout extends StatelessWidget {
-  int number = 0;
-   @override
-   Widget build(BuildContext context) {
-
-   return _myListView(context);
-  }
-   }
-
-
-
-
-
-
- // replace this function with the code in the examples
- Widget _myListView(BuildContext context) {
-  int number = 0;
-   return ListView(
-       children: <Widget>[
-        Container(
-         child:
-         Text(number.toString(),style: TextStyle(fontSize: 40),),
-
-
-        ),
-    ListTile(
-    leading: CircleAvatar(
-    backgroundImage: AssetImage('images/music1.jpg'),
-    ),
-    title: Text('Tom Yum'),
-    subtitle: Text('Price: \$4'),
-    trailing: Icon(Icons.keyboard_arrow_right),
-    onTap: () {
-    print('Tom Yum');
-
-    },
-    ),
-    ListTile(
-    leading: CircleAvatar(
-    backgroundImage: AssetImage('images/music2.jpg'),
-    ),
-    title: Text('Bread'),
-    subtitle: Text('Price: \$5'),
-    trailing: Icon(Icons.my_library_music_sharp),
-    onTap: () {
-    print('Bread');
-    },
-    ),
-    ListTile(
-    leading: CircleAvatar(
-    backgroundImage: AssetImage('images/music2.jpg'),
-    ),
-    title: Text('Burger'),
-    subtitle: Text('Price: \$6'),
-    trailing: Icon(Icons.keyboard_arrow_right),
-    onTap: () {
-    print('Burger');
-   },
-    ),
-   ListTile(
-   leading: CircleAvatar(
-    backgroundImage: AssetImage('images/music2.jpg'),
-    ),
-   title: Text('Food Frence Toast'),
-    subtitle: Text('Price: \$10'),
-   trailing: Icon(Icons.keyboard_arrow_right),
-    onTap: () {
-    print('Frence Toast');
-    },
-    ),
-    ListTile(
-   leading: CircleAvatar(
-    backgroundImage: AssetImage('images/music2.jpg'),
-    ),
-    title: Text('Kollam'),
-    subtitle: Text('Price: \$5'),
-    trailing: Icon(Icons.keyboard_arrow_right),
-    onTap: () {
-    print('Kollam');
-   },
-   ),
-        ListTile(
-         leading: CircleAvatar(
-          backgroundImage: AssetImage('images/music2.jpg'),
-         ),
-         title: Text('Kollam'),
-         subtitle: Text('Price: \$5'),
-         trailing: Icon(Icons.keyboard_arrow_right),
-         onTap: () {
-          print('Kollam');
-         },
-        ),
-        ListTile(
-         leading: CircleAvatar(
-          backgroundImage: AssetImage('images/music2.jpg'),
-         ),
-         title: Text('Kollam'),
-         subtitle: Text('Price: \$5'),
-         trailing: Icon(Icons.keyboard_arrow_right),
-         onTap: () {
-          print('Kollam');
-         },
-        ),
-        ListTile(
-         leading: CircleAvatar(
-          backgroundImage: AssetImage('images/music2.jpg'),
-         ),
-         title: Text('Kollam'),
-         subtitle: Text('Price: \$5'),
-         trailing: Icon(Icons.keyboard_arrow_right),
-         onTap: () {
-          print('Kollam');
-         },
-        ),
-        ListTile(
-         leading: CircleAvatar(
-          backgroundImage: AssetImage('images/music2.jpg'),
-         ),
-         title: Text('Kollam'),
-         subtitle: Text('Price: \$5'),
-         trailing: Icon(Icons.keyboard_arrow_right),
-         onTap: () {
-          print('Kollam');
-         },
-        ),
-        ListTile(
-         leading: CircleAvatar(
-          backgroundImage: AssetImage('images/music2.jpg'),
-         ),
-         title: Text('Kollam'),
-         subtitle: Text('Price: \$5'),
-         trailing: Icon(Icons.keyboard_arrow_right),
-         onTap: () {
-          print('Kollam');
-         },
-        ),
-
-
-    ],
-   );
-
-
-
- }
-
-
-/*import 'package:flutter/material.dart';
-
-void main() {
- runApp(Home());
-}
-
-class Home extends StatefulWidget {
- @override
- _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
- Future<List<double>> getData() async {
-  return items;
- }
-
- Future<double> removeIt(int index) async {
-  return items.removeAt(index);
- }
-
- List<double> items = [100.0, 200.0, 300.0, 400.0];
-
- @override
- Widget build(BuildContext context) {
-  return MaterialApp(
-      home: Scaffold(
-       body: FutureBuilder<List<double>>(
-        future: getData(),
-        builder: (BuildContext context, AsyncSnapshot<List<double>> snapshot) {
-         if (snapshot.hasData)
-          return Column(
-           children: <Widget>[
-            ListView.builder(
-             shrinkWrap: true,
-             itemCount: snapshot.data.length,
-             itemBuilder: (BuildContext context, int index) => ListTile(
-              title: Text('Items : ${snapshot.data[index]}'),
-              trailing: IconButton(
-                  icon: Icon(Icons.delete),
-                  onPressed: () async {
-                   await removeIt(index);
-                   setState(() {});
-                  }),
-             ),
-            ),
-            Container(
-             child:
-             Text('Sum is: ${snapshot.data.fold(0, (a, b) => a + b)}'),
-            )
-           ],
-          );
-
-         return Center(child: CircularProgressIndicator());
-        },
-       ),
-      ));
- }
-}*/
-
-/*
-class cartConstant {
- static int packageCount;
- static List<int> list;
-}
-
-class OrderPage extends StatefulWidget {
- @override
- _OrderPageState createState() => _OrderPageState();
-}
-
-class _OrderPageState extends State<OrderPage> {
- int data = 3;
-
- void refresh() {
-  setState(() {});
- }
-
- @override
- Widget build(BuildContext context) {
-  return Scaffold(
-   backgroundColor: Colors.white,
-   appBar: AppBar(
-    automaticallyImplyLeading: true,
-    iconTheme: IconThemeData(
-     color: Colors.black54, //change your color here
-    ),
-    backgroundColor: Colors.white,
-    elevation: 1,
-    title: Text(
-     "Your order Summery",
-     style: TextStyle(color: Colors.black54),
-    ),
-    centerTitle: true,
-   ),
-   body: Container(
-    child: FutureBuilder(
-     builder: (context, snapshot) {
-//            var datas = snapshot.data;
-      return ListView.builder(
-       physics: ClampingScrollPhysics(),
-       shrinkWrap: true,
-       itemCount: data,
-       itemBuilder: (BuildContext context, int index) {
-//                Cart cart = datas[index];
-        return CartListView(refresh);
-       },
-       padding: EdgeInsets.symmetric(horizontal: 10.0),
-       scrollDirection: Axis.vertical,
-      );
-     },
-    ),
-   ),
-   bottomNavigationBar: _buildTotalContainer(),
-  );
- }
-
- Widget _buildTotalContainer() {
-  return Container(
-   height: 220.0,
-   padding: EdgeInsets.only(
-    left: 10.0,
-    right: 10.0,
-   ),
-   child: Column(
-    children: <Widget>[
-     SizedBox(
-      height: 10.0,
-     ),
-     Padding(
-      padding: const EdgeInsets.only(top: 10),
-      child: Row(
-       mainAxisSize: MainAxisSize.max,
-       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-       children: <Widget>[
-        Text(
-         "Subtotal",
-         style: TextStyle(
-             color: Color(0xFF9BA7C6),
-             fontSize: 16.0,
-             fontWeight: FontWeight.bold),
-        ),
-        Text(
-         cartConstant.packageCount.toString(),
-         style: TextStyle(
-             color: Color(0xFF6C6D6D),
-             fontSize: 16.0,
-             fontWeight: FontWeight.bold),
-        ),
-       ],
-      ),
-     ),
-     SizedBox(
-      height: 15,
-     ),
-     Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-       Text(
-        "Discount",
-        style: TextStyle(
-            color: Color(0xFF9BA7C6),
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold),
-       ),
-       Text(
-        "0.0",
-        style: TextStyle(
-            color: Color(0xFF6C6D6D),
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold),
-       ),
-      ],
-     ),
-     SizedBox(
-      height: 10.0,
-     ),
-     Divider(
-      height: 2.0,
-     ),
-     SizedBox(
-      height: 20.0,
-     ),
-     Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-       Text(
-        "Cart Total",
-        style: TextStyle(
-            color: Color(0xFF9BA7C6),
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold),
-       ),
-       Text(
-        "8000",
-        style: TextStyle(
-            color: Color(0xFF6C6D6D),
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold),
-       ),
-      ],
-     ),
-     SizedBox(
-      height: 20.0,
-     ),
-     GestureDetector(
-      onTap: () {
-//              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SignInPage()));
-      },
-      child: Container(
-       height: 50.0,
-       decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.circular(35.0),
-       ),
-       child: Center(
-        child: Text(
-         "Proceed To Checkout",
-         style: TextStyle(
-          color: Colors.white,
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-         ),
-        ),
-       ),
-      ),
-     ),
-     SizedBox(
-      height: 20.0,
-     ),
-    ],
-   ),
-  );
- }
-}
-
-class CartListView extends StatefulWidget {
- VoidCallback callback;
-
- CartListView(this.callback);
- @override
- _CartListViewState createState() => _CartListViewState();
-}
-
-class _CartListViewState extends State<CartListView> {
- int _counter = 1;
- int getPrice(int i, int priceC) {
-  cartConstant.packageCount = i * priceC;
-  return cartConstant.packageCount;
- }
-
- @override
- Widget build(BuildContext context) {
-  return Card(
-   child: Padding(
-    padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
-    child: Row(
-     mainAxisSize: MainAxisSize.max,
-     crossAxisAlignment: CrossAxisAlignment.start,
-     children: <Widget>[
-      Container(
-       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFFD3D3D3), width: 2.0),
-        borderRadius: BorderRadius.circular(10.0),
-       ),
-       child: Padding(
-        padding: EdgeInsets.symmetric(
-         horizontal: 10.0,
-        ),
-        child: Column(
-         crossAxisAlignment: CrossAxisAlignment.center,
-         children: <Widget>[
-          InkWell(
-              onTap: () {
-               setState(() {
-                _counter++;
-                if (_counter > 20) {
-                 _counter = 20;
-                }
-               });
-
-               widget.callback();
-              },
-              child: Icon(Icons.add, color: Color(0xFFD3D3D3))),
-          Text(
-           "$_counter",
-           style: TextStyle(fontSize: 18.0, color: Colors.grey),
-          ),
-          InkWell(
-              onTap: () {
-               setState(() {
-                _counter--;
-                if (_counter < 2) {
-                 _counter = 1;
-                }
-               });
-
-               widget.callback();
-              },
-              child: Icon(Icons.remove, color: Color(0xFFD3D3D3))),
-         ],
-        ),
-       ),
-      ),
-      SizedBox(
-       width: 20.0,
-      ),
-      Container(
-       height: 70.0,
-       width: 70.0,
-       decoration: BoxDecoration(
-           image: DecorationImage(
-               image: AssetImage("images/music2.jpg"),
-               fit: BoxFit.cover),
-           borderRadius: BorderRadius.circular(35.0),
-           boxShadow: [
-            BoxShadow(
-                color: Colors.black54,
-                blurRadius: 5.0,
-                offset: Offset(0.0, 2.0))
-           ]),
-      ),
-      SizedBox(
-       width: 20.0,
-      ),
-      Column(
-       mainAxisAlignment: MainAxisAlignment.start,
-       crossAxisAlignment: CrossAxisAlignment.start,
-       children: <Widget>[
-        Text(
-         "Employee Package",
-         style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: 5.0),
-        SizedBox(height: 5.0),
-        Container(
-         height: 25.0,
-         width: 120.0,
-         child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-           Row(
-            children: <Widget>[
-             Text("Price",
-                 style: TextStyle(
-                     color: Color(0xFFD3D3D3),
-                     fontWeight: FontWeight.bold)),
-             SizedBox(
-              width: 5.0,
-             ),
-             InkWell(
-              onTap: () {},
-              child: Text(
-               getPrice(_counter, 2000).toString(),
-               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-               ),
-              ),
-             ),
-             SizedBox(
-              width: 10.0,
-             ),
-            ],
-           ),
-          ],
-         ),
-        ),
-       ],
-      ),
-      Spacer(),
-      GestureDetector(
-       onTap: () {},
-       child: Icon(
-        Icons.cancel,
-        color: Colors.grey,
-       ),
-      ),
-     ],
-    ),
-   ),
-  );
- }
-}
-
-void main() {
- runApp(MyApp());
-}
-
 class MyApp extends StatelessWidget {
- @override
- Widget build(BuildContext context) {
-  return MaterialApp(
-   title: 'Flutter Demo',
-   theme: ThemeData(
-    primarySwatch: Colors.blue,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-   ),
-   home: OrderPage(),
-  );
- }
-}*/
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyHomePage());
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  List picked = [false, false ,false ,false, false ,false,
+  false, false ,false , false ];
+
+  int totalAmount = 0;
+
+  pickToggle(index) {
+    setState(() {
+      picked[index] = !picked[index];
+      getTotalAmount();
+    });
+  }
+
+  getTotalAmount() {
+    var count = 0;
+    for (int i = 0; i < picked.length; i++) {
+      if (picked[i]) {
+        count = count + 1;
+        //totalAmount = totalAmount + double.parse(itemCard[i].price);
+      }
+      if (i == picked.length - 1) {
+        setState(() {
+         
+         // totalAmount += price;
+          //totalAmount =  20 * count;
+        });
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(shrinkWrap: true, children: <Widget>[
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
+          Stack(children: [
+            Stack(children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height,
+                width: double.infinity,
+              ),
+              Container(
+                height: 250.0, //250
+                width: double.infinity,
+                color: Color(0xFFFDD148),
+              ),
+              Positioned(
+                bottom: 450.0,
+                right: 100.0,
+                child: Container(
+                  height: 1000.0, //400
+                  width: 400.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(200.0),
+                    color: Color(0xFFFEE16D),
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 500.0,
+                left: 150.0,
+                child: Container(
+                    height: 1000.0, //300
+                    width: 400.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(150.0),
+                        color: Color(0xFFFEE16D).withOpacity(0.5))),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 15.0),
+                child: IconButton(
+                    alignment: Alignment.topLeft,
+                    icon: Icon(Icons.arrow_back),
+                    onPressed: () {}),
+              ),
+              Positioned(
+                  top: 75.0,
+                  left: 15.0,
+                  child: Text(
+                    'All-20 Music',
+                    style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold),
+                  )),
+              Positioned(
+                top: 150.0, //150
+                child: Wrap(
+                  spacing: 5.0,
+                  runSpacing: 5.0, 
+                  direction: Axis.vertical, 
+                  children: <Widget>[
+                    itemCard('Take it slow', 'Milky Day', '20',
+                        'images/music1.jpg', true, 0),
+                    itemCard('Love is Not Dying', 'Jeremy Zucker', '20',
+                        'images/music2.jpg', true, 1),
+                    itemCard('Irene', 'jimmy brown', '20',
+                        'images/music3.jpg', true, 2),
+                   itemCard('Feeling Blue', 'jimmy brown', '20',
+                        'images/music4.jpg', true, 3),
+                    itemCard('green tea and /n honey', 'Dane Amar', '20',
+                        'images/music5.jpg', true, 4),
+                    itemCard('morning coffee', 'chevy', '20',
+                        'images/music6.jpg', true, 5),
+                      itemCard('Rose', 'finn askew', '20',
+                        'images/music7.jpg', true, 6),
+                      itemCard('Good days', 'Keshi', '20',
+                        'images/music8.jpg', true, 7),
+                      itemCard('Sun', 'TheToys', '20',
+                        'images/music9.jpg', true, 8),
+                       itemCard('PainKiller', 'Ruel', '20',
+                        'images/music10.jpg', true, 9),
+                        
+                  ],
+                ),
+              ),
+              Padding(
+                  padding: EdgeInsets.only(top: 1500.0, bottom: 15.0),
+                  child: Container(
+                      height: 50.0,
+                      width: double.infinity,
+                      color: Colors.white,
+                      child: Row(
+                    
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Text('Total: \$' + totalAmount.toString()),
+                          SizedBox(width: 0.0),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: RaisedButton(
+                              onPressed: () {},
+                              elevation: 0.5,
+                              color: Colors.red,
+                              child: Center(
+                                child: Text(
+                                  'Pay Now',
+                                ),
+                              ),
+                              textColor: Colors.white,
+                            ),
+                          )
+                        ],
+                      )))
+            ])
+          ])
+        ])
+      ]),
+      bottomNavigationBar: Material(
+          elevation: 7.0,
+          color: Colors.white,
+          child: Container(
+              height: 50.0,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 50.0,
+                          width: 50.0,
+                          color: Colors.white,
+                          child: Icon(
+                            Icons.shopping_basket,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 50.0,
+                          width: 50.0,
+                          color: Colors.white,
+                          child: Icon(
+                            Icons.account_box,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 50.0,
+                          width: 50.0,
+                          color: Colors.white,
+                          child: Icon(
+                            Icons.shopping_cart,
+                            color: Colors.yellow,
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 50.0,
+                          width: 50.0,
+                          color: Colors.white,
+                          child: Icon(
+                            Icons.account_box,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                    ]),
+              ))),
+    );
+  }
+
+  Widget itemCard(itemName, artist, price, imgPath, available, i) {
+    return InkWell(
+      onTap: () {
+        if (available) {
+          pickToggle(i);
+        }
+      },
+      child: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Material(
+              borderRadius: BorderRadius.circular(10.0),
+              elevation: 5.0, //3.0
+              child: Container(
+                  padding: EdgeInsets.only(left: 15.0, right: 10.0),
+                  width: MediaQuery.of(context).size.width - 20.0,
+                  height: 150.0, //150
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10.0)),
+                  child: Row(
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                              height: 25.0,
+                              width: 25.0,
+                              decoration: BoxDecoration(
+                                color: available
+                                    ? Colors.grey.withOpacity(0.4)
+                                    : Colors.red.withOpacity(0.4),
+                                borderRadius: BorderRadius.circular(12.5),
+                              ),
+                              child: Center(
+                                  child: available
+                                      ? Container(
+                                          height: 12.0,
+                                          width: 12.0,
+                                          decoration: BoxDecoration(
+                                              color: picked[i]
+                                                  ? Colors.yellow
+                                                  : Colors.grey
+                                                      .withOpacity(0.4),
+                                              borderRadius:
+                                                  BorderRadius.circular(6.0)),
+                                        )
+                                      : Container()))
+                        ],
+                      ),
+                      SizedBox(width: 10.0),
+                      Container(
+                        height: 150.0,
+                        width: 125.0,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(imgPath),
+                                fit: BoxFit.contain)),
+                      ),
+                      SizedBox(width: 4.0),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                itemName,
+                                style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15.0),
+                              ),
+                              SizedBox(width: 7.0),
+                              available
+                                  ? picked[i]
+                                      ? Text(
+                                          'x1',
+                                          style: TextStyle(
+                                              fontFamily: 'Montserrat',
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14.0,
+                                              color: Colors.grey),
+                                        )
+                                      : Container()
+                                  : Container()
+                            ],
+                          ),
+                          SizedBox(height: 7.0),
+                          available
+                              ? Text(
+                                  'Artist: ' + artist,
+                                  style: TextStyle(
+                                      fontFamily: 'Quicksand',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14.0,
+                                      color: Colors.grey),
+                                )
+                              : OutlineButton(
+                                  onPressed: () {},
+                                  borderSide: BorderSide(
+                                      color: Colors.red,
+                                      width: 1.0,
+                                      style: BorderStyle.solid),
+                                  child: Center(
+                                    child: Text('Find Similar',
+                                        style: TextStyle(
+                                            fontFamily: 'Quicksand',
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.0,
+                                            color: Colors.red)),
+                                  ),
+                                ),
+                          SizedBox(height: 7.0),
+                          available
+                              ? Text(
+                                  '\$' + price,
+                                  style: TextStyle(
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0,
+                                      color: Color(0xFFFDD34A)),
+                                )
+                              : Container(),
+                        ],
+                      )
+                    ],
+                  )))),
+    );
+  }
+}
